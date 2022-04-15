@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: hsl(273deg, 4%, 51%);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 1em 2.17em;
+  border: 1.5px solid hsl(0deg, 0%, 100%);
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(256deg, 26%, 20%);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 31px clamp(24px, 12vw, 168px);
+}
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-toggler {
+  background-color: transparent;
+  display: none;
+  position: absolute;
+  right: 92px;
+  bottom: 24px;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid hsl(270deg, 9%, 17%);
+}
+.navbar .navbar-toggler span {
+  pointer-events: none;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.navbar ul .btn-dark {
+  border: 1.5px solid hsl(270deg, 9%, 17%);
+}
+.navbar ul .btn-dark:hover {
+  background-color: hsl(270deg, 9%, 17%);
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar .logo-container {
+    padding-left: 24px;
+  }
+  .navbar .navbar-toggler {
+    display: block;
+    right: 24px;
+  }
+  .navbar ul a {
+    color: hsl(0deg, 0%, 100%);
+    font-size: 1.25rem;
+  }
+  .navbar ul a:first-child {
+    margin-top: 40px;
+  }
+  .navbar ul .btn-dark {
+    margin-bottom: 300px;
+    border: 1.5px solid hsl(0deg, 0%, 100%);
+  }
+  .navbar [aria-expanded=false] ~ ul {
+    display: none;
+  }
+  .navbar [aria-expanded=true].navbar-toggler {
+    top: 20px;
+  }
+  .navbar [aria-expanded=true] ~ ul {
+    background-color: hsl(270deg, 9%, 17%);
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

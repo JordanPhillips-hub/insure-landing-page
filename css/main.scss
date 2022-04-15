@@ -1,0 +1,139 @@
+// Globals
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-violet: hsl(256, 26%, 20%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {font-family: "DM Serif Display", serif;}
+
+ul {list-style: none;}
+
+a {
+  color: $dark-grayish-violet;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 1em 2.17em;
+  border: 1.5px solid $white;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: $white;
+  color: $dark-violet;
+}
+
+// Navbar
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 31px clamp(24px, 12vw, 168px);
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    right: 92px;
+    bottom: 24px;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid $very-dark-violet;
+
+    span {pointer-events: none;}
+  }
+
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    .btn-dark {border: 1.5px solid $very-dark-violet;}
+
+    .btn-dark:hover {
+      background-color: $very-dark-violet;
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 0;
+    padding-right: 0;
+
+    .logo-container {padding-left: 24px;}
+
+    .navbar-toggler {
+      display: block;
+      right: 24px;
+    }
+
+    ul {
+      a {
+        color: $white;
+        font-size: 1.25rem;
+      }
+
+      a:first-child {margin-top: 40px;}
+
+      .btn-dark {
+        margin-bottom: 300px;
+        border: 1.5px solid $white;
+      }
+    }
+
+    [aria-expanded="false"] ~ ul {display: none;}
+
+    [aria-expanded="true"].navbar-toggler {top: 20px;}
+
+    [aria-expanded="true"] ~ ul {
+      background-color: $very-dark-violet;
+      background-image: url('../images/bg-pattern-mobile-nav.svg');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
