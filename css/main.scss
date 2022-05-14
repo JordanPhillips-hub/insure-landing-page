@@ -121,8 +121,6 @@ button {
     margin-bottom: 24px;
   }
 
-  [aria-expanded="true"] ~ ul li:last-child {border: 1.5px solid clr(white);}
-
   .navbar-toggler {
     border: 1.5px solid clr(very-dark-violet);
     background-color: transparent;
@@ -246,6 +244,11 @@ footer {
     gap: 16px;
     justify-content: center;
     align-items: center;
+
+    img:hover {
+      transition: all ease-in-out 0.3s;
+      transform: scale(1.3, 1.3);
+    }
   }
 
   hr {
