@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: []
+- Live Site URL: [https://jordanphillips-hub.github.io/insure-landing-page/]
 
 ### Built with
 
