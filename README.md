@@ -4,15 +4,11 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 ## Table of contents
 
-- [Overview](#overview)
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
 - [Author](#author)
-
-
-## Overview
 
 ### The challenge
 
